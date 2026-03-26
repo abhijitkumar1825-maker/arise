@@ -1,0 +1,156 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arise SMP | Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet"><style>
+    :root {
+        --bg-main: #0b1320;
+        --card-bg: #122032;
+        --card-hover: #16283d;
+        --card-border: #1e3046;
+        --text-light: #ffffff;
+        --text-muted: #94a3b8;
+
+        --warrior: #00a8ff;
+        --knight: #00e676;
+        --elite: #d500f9;
+        --immortal: #ff1744;
+        --custom: #ffea00;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        background-color: var(--bg-main);
+        color: var(--text-light);
+    }
+
+    #splash-screen {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: var(--bg-main);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 9999;
+        cursor: pointer;
+    }
+
+    .splash-text {
+        font-size: 3rem;
+        font-weight: 900;
+        background: linear-gradient(90deg, #6a82fb, #fc5c7d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    #main-content {
+        display: none;
+        padding: 40px;
+    }
+
+    .store-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .store-header h1 {
+        font-size: 3rem;
+    }
+
+    .text-arise {
+        color: #6a82fb;
+    }
+
+    .text-smp {
+        color: #f105b4;
+    }
+
+    .ranks-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .rank-card {
+        background: var(--card-bg);
+        padding: 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: white;
+        transition: 0.3s;
+    }
+
+    .rank-card:hover {
+        transform: scale(1.05);
+    }
+
+    .rank-info h2 {
+        font-size: 1.8rem;
+    }
+
+    .rank-price {
+        color: var(--text-muted);
+    }
+</style>
+
+</head><body><div id="splash-screen" onclick="hideSplash()">
+    <div class="splash-text">Welcome to Arise SMP</div>
+</div><div id="main-content"><div class="store-header">
+    <h1><span class="text-arise">Arise</span> <span class="text-smp">SMP Store</span></h1>
+</div>
+
+<div class="ranks-grid">
+
+    <a href="#" class="rank-card">
+        <div class="rank-info">
+            <h2 style="color: var(--warrior);">Warrior</h2>
+            <div class="rank-price">49 INR / month</div>
+        </div>
+    </a>
+
+    <a href="#" class="rank-card">
+        <div class="rank-info">
+            <h2 style="color: var(--knight);">Knight</h2>
+            <div class="rank-price">79 INR / month</div>
+        </div>
+    </a>
+
+    <a href="#" class="rank-card">
+        <div class="rank-info">
+            <h2 style="color: var(--elite);">Elite</h2>
+            <div class="rank-price">149 INR / month</div>
+        </div>
+    </a>
+
+    <a href="#" class="rank-card">
+        <div class="rank-info">
+            <h2 style="color: var(--immortal);">Immortal</h2>
+            <div class="rank-price">249 INR / month</div>
+        </div>
+    </a>
+
+    <a href="#" class="rank-card">
+        <div class="rank-info">
+            <h2 style="color: var(--custom);">Custom</h2>
+            <div class="rank-price">399 INR / month</div>
+        </div>
+    </a>
+
+</div>
+
+</div><script>
+function hideSplash() {
+    document.getElementById("splash-screen").style.display = "none";
+    document.getElementById("main-content").style.display = "block";
+}
+</script></body>
+</html>
